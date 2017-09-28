@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@+id/rl_head_view"
+    android:paddingBottom="20dp"
+    android:paddingTop="20dp">
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RadioButton
+            android:id="@+id/rb_restart"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="重启"
+            android:checked="false"
+            android:textColor="@color/color_white"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/rb_shut_down"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="关机"
+            android:checked="false"
+            android:textColor="@color/color_white"
+            android:textSize="13sp" />
+    </RadioGroup>
+</FrameLayout>

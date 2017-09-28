@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90dp">
+
+
+
+        <ImageView
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_liuliang" />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="使用流量"
+            android:textColor="@color/color_white"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="7dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_enter" />
+
+
+
+</LinearLayout>

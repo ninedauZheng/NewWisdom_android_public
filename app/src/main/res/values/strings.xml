@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">新智汇MIFI</string>
+
+
+    <string name="could_use_flux">已用流量</string>
+
+    <string-array name="setting_device">
+        <item>设置</item>
+        <item>路由名称与密码设置</item>
+        <item>设备操作功能</item>
+        <item>双Sim卡切换</item>
+        <item>设备解绑</item>
+        <item>恢复出厂设置</item>
+        <item>管理</item>
+        <item>SD卡管理</item>
+    </string-array>
+
+
+    <string name="update">刷新</string>
+    <string name="operation_set">设备操作</string>
+    <string name="tips">提示</string>
+    <string name="need_reset">您确定需要重启设备么？</string>
+    <string name="unbind">您确定立即解除绑定么？</string>
+    <string name="reset">您确定立即恢复出厂设置么？</string>
+    <string name="no_ok">该功能暂未开放，敬请期待...</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="getting">获取中</string>
+
+    <string name="now_not_connect_correct_device">当前未连接目标设备</string>
+    <string name="has_imei">检测到您绑定了设备，是否获取该设备信息？</string>
+    <string name="no_card">未检测到您有绑定设备信息</string>
+
+    <string name="no_sim">未获取您的设备卡信息</string>
+
+    <string name="no_have">暂无</string>
+    <string name="no_know">未知</string>
+    <string name="pass">跳过</string>
+
+
+    <string name="restart">现在需要立即重启么？</string>
+    <string name="error_psw">抱歉，密码长度错误（8到12位）</string>
+    <string name="error_ssid">抱歉，Wifi名称输入错误</string>
+    <string name="error_wlan">抱歉，网络错误</string>
+    <string name="operator_ok">恭喜，修改成功</string>
+    <string name="shutdown">现在需要关闭路由么？</string>
+    <string name="pls_5_size">请输入少于5个长度的别名</string>
+    <string name="wlan_mac_add">WLAN MAC地址</string>
+    <string name="ip_add">IP地址</string>
+    <string name="device_name">终端名称</string>
+    <string name="mobile_num" >手机号</string>
+    <string name="pls_input_mobile_num" >请输入您的手机号码</string>
+    <string name="pls_input_verify_num" >请输入验证码</string>
+    <string name="verify_code" >验证码</string>
+    <string name="login" >登录</string>
+
+
+</resources>

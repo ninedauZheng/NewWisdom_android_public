@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "26.0.0"
+    defaultConfig {
+        applicationId "com.app.newwisdom"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 44
+        versionName "1.4.4"
+        testInstrumentationRunner "android.sup" +
+                "port.test.runner.AndroidJUnitRunner"
+        ndk{
+            abiFilters 'armeabi'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+//        sit{
+//            debuggable false
+//        }
+    }
+    signingConfigs{
+        debug{
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        release{
+            v2SigningEnabled true
+            v1SigningEnabled true
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.squareup.okio:okio:1.7.0'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.3'
+    compile 'com.tencent.bugly:crashreport_upgrade:latest.release'
+    compile 'com.tencent.bugly:nativecrashreport:latest.release'
+}

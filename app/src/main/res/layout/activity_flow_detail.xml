@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_common_bg">
+
+    <com.app.newwisdom.view.view.CommonTitleView
+        android:id="@+id/common_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:center_text = "流量详情"/>
+
+    <com.app.newwisdom.view.viewGourp.FlowDetailsTitle
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--<android.support.v4.view.ViewPager-->
+        <!--android:id="@+id/vp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"/>-->
+    <com.app.newwisdom.view.view.FluxFormView
+        android:id="@+id/flux_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

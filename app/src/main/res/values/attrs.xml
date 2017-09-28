@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="detailView">
+        <attr name="title" format="string" />
+        <attr name="context" format="string" />
+        <attr name="img_resource" format="reference" />
+        <attr name="style">
+            <enum name="BATTERY" value="0" />
+            <enum name="FLUX" value="1" />
+            <enum name="DEVICE" value="2" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="titleView">
+        <attr name="left_img" format="reference" />
+        <attr name="right_img" format="reference" />
+        <attr name="center_img" format="reference" />
+        <attr name="center_text" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="BottomView">
+        <attr name="icon_res" format="reference" />
+        <attr name="tv_title" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="LoginItemView">
+        <attr name="tv_text" format="string" />
+        <attr name="hint" format="reference" />
+    </declare-styleable>
+
+</resources>

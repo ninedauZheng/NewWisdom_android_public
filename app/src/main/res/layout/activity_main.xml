@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_common_bg">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.app.newwisdom.view.view.CommonTitleView
+            android:id="@+id/common_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:center_img="@drawable/ic_logo"
+            app:left_img="@drawable/ic_search"
+            app:right_img="@drawable/ic_set" />
+
+        <com.app.newwisdom.view.viewGourp.CommonViewPager
+            android:id="@+id/cvp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <android.support.v4.view.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.app.newwisdom.view.view.CircleGroup
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+        </com.app.newwisdom.view.viewGourp.CommonViewPager>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <com.app.newwisdom.view.view.DetailView
+                android:id="@+id/ct1"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="5dp"
+                app:context="电池容量"
+                app:img_resource="@drawable/ic_dianchi"
+                app:style="BATTERY"
+                app:title="未知" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/color_white" />
+
+            <com.app.newwisdom.view.view.DetailView
+                android:id="@+id/ct2"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:context="运营商"
+                app:img_resource="@drawable/ic_wangluo"
+                app:style="FLUX"
+                app:title="暂无" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:background="@color/color_white" />
+
+            <com.app.newwisdom.view.view.DetailView
+                android:id="@+id/ct3"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:context="连接设备数"
+                app:img_resource="@drawable/ic_lianjieshebei"
+                app:style="DEVICE"
+                app:title="暂无" />
+        </LinearLayout>
+
+        <com.app.newwisdom.view.viewGourp.FluxCircleViewGroup
+            android:id="@+id/fcvg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="124dp"
+        android:layout_gravity="bottom"
+        android:src="@drawable/bg_sou" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+        <com.app.newwisdom.view.view.BottomView
+            android:id="@+id/btn_flux"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:tv_title="设备信息"/>
+
+        <com.app.newwisdom.view.view.BottomView
+            android:id="@+id/btn_name"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:icon_res="@drawable/ic_sim"
+            app:tv_title="名称" />
+    </LinearLayout>
+
+
+
+</FrameLayout>

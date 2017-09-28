@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/color_common_bg"
+    android:paddingLeft="13dp">
+
+
+    <ImageView
+        android:id="@+id/img_detail"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_lianjieshebei"
+        android:visibility="gone"
+        />
+
+    <com.app.newwisdom.view.view.BatteryView
+        android:id="@+id/batteryView"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+         />
+
+    <com.app.newwisdom.view.view.SignView
+        android:id="@+id/signView"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="38dp"
+        android:text="我是标题"
+        android:textColor="@color/color_white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="5dp"
+        android:text="我是内容"
+        android:textColor="@color/color_grey"
+        android:textSize="12sp" />
+</RelativeLayout>
