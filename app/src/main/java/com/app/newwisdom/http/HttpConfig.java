@@ -6,6 +6,7 @@ package com.app.newwisdom.http;
 
 public class HttpConfig {
 
+    public static final String partner_id=1+"";
 
     //测试url
     public static final String COMMON_URL = "http://www.dmifi.com/v1/devices/";
@@ -25,9 +26,9 @@ public class HttpConfig {
     //显示卡详情
     public static final String SHOW = "show?";
     //获取banners
-    public static final String BANNER = "banners";
+    public static final String BANNER = "banners?partner_id="+partner_id;
     //获取广告信息
-    public static final String AD = "ad";
+    public static final String AD = "ad?partner_id="+partner_id;
     //恢复出厂设置  imei
     public static final String RESTORE = "restore";
     //关机 设备

@@ -6,7 +6,6 @@ package com.app.newwisdom;
 
 import android.app.Application;
 
-import com.pgyersdk.crash.PgyCrashManager;
 import com.tencent.bugly.Bugly;
 
 public class PgyApplication extends Application {
@@ -17,7 +16,6 @@ public class PgyApplication extends Application {
         super.onCreate();
 //        CrashReport.initCrashReport(getApplicationContext());
         Bugly.init(getApplicationContext(),"717801d77a",true);
-        PgyCrashManager.register(this);
     }
 
 }

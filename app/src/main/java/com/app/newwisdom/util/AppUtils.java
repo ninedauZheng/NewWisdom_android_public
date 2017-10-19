@@ -161,7 +161,7 @@ public class AppUtils {
                 .getDefaultSharedPreferences(context);
         try {
             String wordBase64 = sharePre.getString(key, "");
-// 将base64格式字符串还原成byte数组
+        // 将base64格式字符串还原成byte数组
             if (wordBase64 == null || wordBase64.equals("")) { // 不可少，否则在下面会报java.io.StreamCorruptedException
                 return null;
             }
@@ -169,7 +169,7 @@ public class AppUtils {
                     Base64.DEFAULT);
             ByteArrayInputStream bais = new ByteArrayInputStream(objBytes);
             ObjectInputStream ois = new ObjectInputStream(bais);
-// 将byte数组转换成product对象
+        // 将byte数组转换成product对象
             Object obj = ois.readObject();
             bais.close();
             ois.close();

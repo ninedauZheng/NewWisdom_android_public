@@ -300,7 +300,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
         if (!succ) {
             handler.sendEmptyMessage(3);
         } else {
-
             manager.saveImei(this);
             mService.getAllData(MainActivity.this, MainActivity.this);
         }

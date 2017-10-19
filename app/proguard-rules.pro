@@ -23,9 +23,13 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
--dontwarn com.tencent.bugly.**
--keep public class com.tencent.bugly.**{*;}
+
 
 -dontwarn com.tencent.bugly.**
+-keep class com.app.sande.model.**
+-keep class com.app.sande.view.**
 -keep public class com.tencent.bugly.**{*;}
 -keep class android.support.**{*;}
+-dontwarn com.squareup.okhttp3.**
+-keep class com.squareup.okhttp3.** { *;}
+-dontwarn okio.**

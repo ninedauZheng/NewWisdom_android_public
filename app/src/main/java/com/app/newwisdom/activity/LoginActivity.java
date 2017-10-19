@@ -192,10 +192,10 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                     Toast.makeText(LoginActivity.this, "验证码发送成功，请尽快登录...", Toast.LENGTH_LONG).show();
                     break;
                 case SERVICE_DEFINED:
-                    String value = (String) msg.obj;
                     int error = 0;
                     String text = null;
                     try {
+                            String value = (String) msg.obj;
                         if (value.length() == 0) {
                             throw new NullPointerException("the value's length was 0.");
                         } else {
@@ -210,7 +210,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                         error = 000000;
                         text = "空指针错误";
                     }
-
                     Toast.makeText(LoginActivity.this, "错误码:" + error + "," + text, Toast.LENGTH_LONG).show();
                     break;
                 case LOGIN_SUSS:

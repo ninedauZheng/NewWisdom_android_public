@@ -7,8 +7,8 @@ android {
         applicationId "com.app.newwisdom"
         minSdkVersion 16
         targetSdkVersion 25
-        versionCode 44
-        versionName "1.4.4"
+        versionCode 50
+        versionName "1.5.0"
         testInstrumentationRunner "android.sup" +
                 "port.test.runner.AndroidJUnitRunner"
         ndk{
@@ -17,12 +17,9 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-//        sit{
-//            debuggable false
-//        }
     }
     signingConfigs{
         debug{

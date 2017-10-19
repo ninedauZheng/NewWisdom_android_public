@@ -76,18 +76,17 @@ public class HttpManager {
         if (isRouter) {
             request = mHttpClient.setParams4Get(ROUTER_INFO_URL + INFO + "?key=" + MD5.getVerificationCode());
         } else {
-            request = mHttpClient.setParams4Get(COMMON_URL + HttpConfig.SHOW + "imei=" + imei);
+            request = mHttpClient.setParams4GetAndHead(COMMON_URL + HttpConfig.SHOW + "imei=" + imei);
         }
         mHttpClient.sendRequest(activity, request, callback);
     }
 
-
     private void getBannerImages(BaseActivity activity, OkHttpCallBack callback) {
-        mHttpClient.sendRequest(activity, mHttpClient.setParams4Get(COMMON_URL + BANNER), callback);
+        mHttpClient.sendRequest(activity, mHttpClient.setParams4GetAndHead(COMMON_URL + BANNER), callback);
     }
 
     private void getAD(BaseActivity activity, OkHttpCallBack callback) {
-        mHttpClient.sendRequest(activity, mHttpClient.setParams4Get(COMMON_URL + AD), callback);
+        mHttpClient.sendRequest(activity, mHttpClient.setParams4GetAndHead(COMMON_URL + AD), callback);
     }
 
     private void getIMEI(Context activity, OkHttpCallBack callBack) {
@@ -284,7 +283,6 @@ public class HttpManager {
         }
         String imei = (targetIMEI == null ? AppUtils.getSPIMEI(context) : targetIMEI);
         final boolean isTrueRouter = mDeviceManager.isConnectTrueRouter();
-        Log.i("ninedau", "isTrueRouter= " + isTrueRouter);
         getCardInfo(activity, isTrueRouter, imei, new OkHttpCallBack() {
 
             @Override
@@ -363,7 +361,7 @@ public class HttpManager {
         }
         HashMap<String, String> map = new HashMap<>();
         map.put("imei", imei);
-        Request request = mHttpClient.setParams4Post(COMMON_URL + RESTORE, map);
+        Request request = mHttpClient.setParams4PostAndHead(COMMON_URL + RESTORE, map);
         mHttpClient.sendRequest(activity, request, callback);
     }
 
@@ -395,7 +393,7 @@ public class HttpManager {
         }
         HashMap<String, String> map = new HashMap<>();
         map.put("imei", imei);
-        Request request = mHttpClient.setParams4Post(COMMON_URL + RESTART, map);
+        Request request = mHttpClient.setParams4PostAndHead(COMMON_URL + RESTART, map);
         mHttpClient.sendRequest(activity, request, callBack);
     }
 
@@ -406,7 +404,7 @@ public class HttpManager {
 
 
     public void getCardInfoByIccid(BaseActivity activity, String iccid, OkHttpCallBack callback) {
-        Request request = mHttpClient.setParams4Get(URL_INFO_BY_ICCID + iccid);
+        Request request = mHttpClient.setParams4GetAndHead(URL_INFO_BY_ICCID + iccid);
         mHttpClient.sendRequest(activity, request, callback);
     }
 
@@ -415,14 +413,16 @@ public class HttpManager {
         map.put("imei", imei);
         map.put("ssid", name);
         map.put("password", psw);
-        Request request = mHttpClient.setParams4Post(COMMON_URL + SET_SSID, map);
+        Request request = mHttpClient.setParams4PostAndHead(COMMON_URL + SET_SSID, map );
         mHttpClient.sendRequest(activity, request, callBack);
     }
 
     public void sendCode(BaseActivity activity, String phoneNUm, OkHttpCallBack callback) {
         HashMap<String, String> map = new HashMap<>();
         map.put("mobile", phoneNUm);
-        Request request = mHttpClient.setParams4Post(COMMON_CODE_SEND, map);
+
+        Request request = mHttpClient.setParams4PostAndHead(COMMON_CODE_SEND, map);
+
         mHttpClient.sendRequest(activity, request, callback);
     }
 
@@ -430,7 +430,10 @@ public class HttpManager {
         HashMap<String, String> map = new HashMap<>();
         map.put("mobile", phoneNum);
         map.put("code", code);
-        Request request = mHttpClient.setParams4Post(COMMON_LOGIN_URL, map);
+        Request request = mHttpClient.setParams4PostAndHead(COMMON_LOGIN_URL, map );
         mHttpClient.sendRequest(activity, request, callBack);
     }
+
+
+
 }

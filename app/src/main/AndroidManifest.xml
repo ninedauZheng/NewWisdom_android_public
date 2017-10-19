@@ -25,14 +25,13 @@
         <activity android:name=".activity.FlowDetailsActivity" />
 
 
-        <activity android:name=".activity.IndexActivity">
+        <activity
+            android:theme="@style/WelcomeStyle"
+            android:name=".activity.IndexActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <meta-data
-                android:name="PGYER_APPID"
-                android:value="11448e97bb90dbb7777e2782a52807a1"></meta-data>
         </activity>
         <activity android:name=".activity.AboutUsActivity" />
         <activity android:name=".activity.CardNameActivity" />

@@ -47,7 +47,6 @@ public class CardNameActivity extends Activity implements View.OnClickListener ,
             if (router.iccid != null && !router.iccid.equals("")) {
                 name = AppUtils.getIccidName(this, router.iccid);
             }
-
             etIccid.setText(name);
         }
     }
